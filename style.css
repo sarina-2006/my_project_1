@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background: #0b0c10;
+  color: #f6f1e8;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(1140px, 92%);
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 12, 16, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #d4af37;
+  letter-spacing: 0.4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #d8d8d8;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.hero {
+  padding: 100px 0 80px;
+  background:
+    radial-gradient(circle at top right, rgba(212,175,55,0.12), transparent 30%),
+    linear-gradient(135deg, #0b0c10 0%, #12141a 50%, #0b0c10 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.4px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4.3rem);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  color: #d0cbc2;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.primary {
+  background: #d4af37;
+  color: #111;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+}
+
+.secondary:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+.hero-card {
+  display: flex;
+  justify-content: center;
+}
+
+.bottle-card {
+  width: 100%;
+  min-height: 360px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+    radial-gradient(circle at top, rgba(212,175,55,0.12), transparent 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.small-label {
+  color: #d4af37;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.bottle-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.info-box,
+.contact-box,
+.product-card,
+.feature-box,
+.review-card {
+  background: #141820;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.info-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.info-box p + p {
+  margin-top: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.product-card,
+.feature-box,
+.review-card {
+  padding: 24px;
+}
+
+.product-card h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.feature-box,
+.review-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 160px;
+}
+
+.review-card p {
+  color: #d9d2c8;
+}
+
+.contact-box {
+  text-align: center;
+  padding: 34px;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.footer {
+  padding: 24px 0 34px;
+  text-align: center;
+  color: #999;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    padding: 18px 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .info-box,
+  .contact-box,
+  .product-card,
+  .feature-box,
+  .review-card,
+  .bottle-card {
+    border-radius: 16px;
+  }
+}
